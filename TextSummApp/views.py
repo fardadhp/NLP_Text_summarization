@@ -2,25 +2,11 @@ from django.shortcuts import render
 import numpy as np
 import pandas as pd
 pd.options.mode.chained_assignment = None
-import matplotlib.pyplot as plt
 from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
 import networkx as nx
 
-# def predictor(request):
-#     if request.method == 'POST':
-#         sepal_length = request.POST['sepal_length']
-#         sepal_width = request.POST['sepal_width']
-#         petal_length = request.POST['petal_length']
-#         petal_width = request.POST['petal_width']
-#         y_pred = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
-#         outcomes = ['Setosa', 'Versicolor', 'Verginica']
-#         return render(request, 'main.html', {'result': outcomes[y_pred[0]]})
-#     return render(request, 'main.html')
-
 def read_article(text):
-    # file = open(file_name, "r", encoding="utf8")
-    # filedata = file.readlines()
     article = text.split(". ")
     sentences = []
     for sentence in article:

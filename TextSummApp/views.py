@@ -3,9 +3,9 @@ import numpy as np
 import pandas as pd
 pd.options.mode.chained_assignment = None
 import nltk
-nltk.download('stopwords')
-import stopwords
-# from nltk.corpus import stopwords
+# nltk.download('stopwords')
+# import stopwords
+from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
 import networkx as nx
 

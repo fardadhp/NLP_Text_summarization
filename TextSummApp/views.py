@@ -2,7 +2,9 @@ from django.shortcuts import render
 import numpy as np
 import pandas as pd
 pd.options.mode.chained_assignment = None
-from nltk.corpus import stopwords
+import nltk
+nltk.download('stopwords')
+# from nltk.corpus import stopwords
 from nltk.cluster.util import cosine_distance
 import networkx as nx
 

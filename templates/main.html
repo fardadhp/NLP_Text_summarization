@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+</head>
+<body>
+    <h1>Text Summarization (using NLTK)</h1>
+    <hr>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <!-- Text: <input type="text" name="text" required><br> -->
+        <textarea name="text" rows="4" cols="100" placeholder="Enter text here..."></textarea><br>
+        Length of summary (number of  sentences): <input type="number" name="n_sentences" required><br>
+        <input type="submit">
+    </form>
+    {% if result %}
+        <h2>Summarized Text</h2><br>
+        <h4>{{result}}</h4>
+    {% endif %}
+</body>
+</html>
